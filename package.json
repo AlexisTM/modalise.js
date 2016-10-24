@@ -1,0 +1,45 @@
+{
+  "name": "modalise.js",
+  "version": "1.0.0",
+  "description": "ModaliseJS aims to give you an easy, fast and efficient library to make modals in plain javascript. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AlexisTM/modalise.js.git"
+  },
+  "keywords": [
+    "Modal",
+    "HTML",
+    "HTML5",
+    "CSS",
+    "CSS3",
+    "DOM",
+    "DOM",
+    "eval",
+    "DOM",
+    "editor",
+    "fast",
+    "javascript",
+    "easy",
+    "efficient"
+  ],
+  "author": "Alexis Paques",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/AlexisTM/modalise.js/issues"
+  },
+  "homepage": "https://github.com/AlexisTM/modalise.js#readme",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "gulp-cli": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "node-sass": "^3.10.1"
+  },
+  "dependencies": {
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1"
+  }
+}
