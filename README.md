@@ -2,6 +2,8 @@
 
 Modalise aims to give you an **easy**, **fast** and **efficient** library to make modals in plain javascript.
 
+The CSS is an example of CSS. You will more likely make your own, which fits your app.
+
 **Web designer (for the CSS in less or sass, as you prefer) is needed**
 
 ## Usage
@@ -72,7 +74,6 @@ For more informations, go to the [API readme](https://github.com/AlexisTM/modali
 
 ## Install
 
-
 ```
 npm install 
 gulp js # build js & listen (browserify)
@@ -82,6 +83,20 @@ gulp # build all & watch changes
 ```
 
 The output files are in the dist folder.
+
+## Examples : 
+
+### [bottom modal](https://github.com/AlexisTM/modalise.js/tree/master/examples/bottom)
+
+![bottom modal](https://github.com/AlexisTM/modalise.js/tree/master/examples/bottom/image.png)
+
+### [bottom modal with pipe javascript](https://github.com/AlexisTM/modalise.js/tree/master/examples/bottom_pipe/)
+
+The image is irrelevant, as it is the same foreground as the bottom modal ;)
+
+### [color palette](https://github.com/AlexisTM/modalise.js/tree/master/examples/color_tests/)
+
+![color palette](https://github.com/AlexisTM/modalise.js/tree/master/examples/color_tests/image.png)
 
 ## Contribute
 
