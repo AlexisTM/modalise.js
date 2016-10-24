@@ -31,21 +31,25 @@ var Modalise = function(id, options) {
   this.show = function(){
     self.modal.dispatchEvent(self.events.onShow);
     self.modal.style.display = "block";
+    return self;
   }
 
   this.hide = function(){
     self.modal.dispatchEvent(self.events.onHide);
     self.modal.style.display = "none";
+    return self;
   }
 
   this.removeEvents = function(){
     var clone = self.modal.cloneNode(true);
     self.modal.parentNode.replaceChild(clone, self.modal);
     self.modal = clone;
+    return self;
   }
 
   this.on = function(event, callback){
     this.modal.addEventListener(event, callback);
+    return self;
   }
 
   this.attach = function() {
@@ -66,7 +70,6 @@ var Modalise = function(id, options) {
     }
 
     items = self.modal.querySelectorAll(self.classConfirm);
-      console.log(items)
     for (var i = items.length - 1; i >= 0; i--) {
       items[i].addEventListener('click', function(){
         self.modal.dispatchEvent(self.events.onConfirm);
@@ -79,16 +82,15 @@ var Modalise = function(id, options) {
         self.show();
       });
     }
+    return self;
   }
 
-  /*
-  * Add object to modalise
-  */
   this.addOpenBtn = function(element) {
     self.btnsOpen.push(element);
   };
 
   init.start();
+  return self;
 };
 
 

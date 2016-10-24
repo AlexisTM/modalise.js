@@ -9,15 +9,10 @@ window.onload = function(){
 	
 	// Modalise(id, options);
 	myModal = new Modalise('exampleModal', {
-		btnsOpen : [btnOpen]
-	});
-
-	myModal.attach();
-
-	// Before showing the modal, you may need it to fill the modal with your data
-	myModal.on('onShow', console.log);
-	// When clicking on the ".confirm" class, use it to get your data back
-	myModal.on('onConfirm', console.log);
-	// When the modal hides, you may want to clean the modal data
-	myModal.on('onHide', console.log);
+			btnsOpen : [btnOpen]
+		})
+		.attach()
+		.on('onShow', console.log)
+		.on('onConfirm', console.log)
+		.on('onHide', console.log);
 }

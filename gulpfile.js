@@ -13,6 +13,7 @@ var sass = require('gulp-sass');
 var gulpJade = require('gulp-jade');
 var gutil = require('gulp-util');
 var concat = require('gulp-concat');
+var merge = require('merge-stream');
 
 
 var opts = assign({}, watchify.args, {entries: ['index.js']});
@@ -46,11 +47,19 @@ function bundleSass(){
 }
 
 function bundleJade(){
-  return gulp.src('examples/bottom/index.jade')
-    .pipe(gulpJade({
-      jade: jade
-    }))
-    .pipe(gulp.dest('examples/bottom/'))
+  var bottom_example = gulp.src('examples/bottom/index.jade')
+    .pipe(gulpJade({ jade: jade }))
+    .pipe(gulp.dest('examples/bottom/'));
+
+  var bottom_pipe_example = gulp.src('examples/bottom_pipe/index.jade')
+    .pipe(gulpJade({ jade: jade }))
+    .pipe(gulp.dest('examples/bottom_pipe/'));
+      
+  var color_tests = gulp.src('examples/color_tests/index.jade')
+    .pipe(gulpJade({ jade: jade }))
+    .pipe(gulp.dest('examples/color_tests/'));
+
+  return merge(bottom_example, bottom_pipe_example);
 }
 
 function bundleJS() {

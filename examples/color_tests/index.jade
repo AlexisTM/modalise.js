@@ -1,0 +1,27 @@
+html
+  head
+    link(href='../../dist/modalise.css', rel='stylesheet')
+    script(src='../../dist/modalise.js', type='text/javascript')
+    script(src='app.js', type='text/javascript')
+  body
+    title Modal Color Example
+    h1 Example color
+    button#openModal Show me the built-in colors
+    .mdl.mdl-fadein#exampleModal
+      .mdl-content.mdl-slidein
+        center
+          .mdl-header.mdl-band-primary
+            span.close X
+            h2 Example modal
+          .mdl-body
+            span Content modal
+          .mdl-footer.mdl-band-primary
+            span .mdl-band-primary
+          .mdl-footer.mdl-band-warning
+            span .mdl-band-warning
+          .mdl-footer.mdl-band-success
+            span .mdl-band-success
+          .mdl-footer.mdl-band-info
+            span .mdl-band-info
+          .mdl-footer.mdl-band-danger
+            span .mdl-band-danger
