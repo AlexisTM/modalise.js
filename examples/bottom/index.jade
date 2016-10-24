@@ -1,0 +1,19 @@
+html
+  head
+    link(href='../../dist/modalise.css', rel='stylesheet')
+    script(src='../../dist/modalise.js', type='text/javascript')
+    script(src='app.js', type='text/javascript')
+  body
+    h1 Example modal 1
+    button#openModal Show the modal
+    .mdl.mdl-fadein#exampleModal
+      .mdl-content-primary.mdl-slidein
+        center
+          .mdl-header.mdl-primary
+            span.close X
+            h2 Example modal
+          .mdl-body.mdl-primary
+            h3 Content modal
+          .mdl-footer.mdl-primary
+            button(onclick='return false').confirm Do thing
+            button(onclick='return false').cancel Cancel the thing

@@ -4,59 +4,72 @@
 var document = window.document,
   extend = require('./utils/extend');
 
-var modalise = function(id, options) {
+var Modalise = function(id, options) {
   var self = this,
     init;
-
+  self.callbacks = {}
   init = {
     start: function() {
-      self.modal          = {};
-      self.classClose     = 'close';
-      self.classCancel    = 'cancel';
-      self.classConfirm   = 'confirm';
-      self.btnsOpen       = [];
-      self.utils          = {
+      self.events = {
+        onShow    : new Event('onShow'),
+        onConfirm : new Event('onConfirm'),
+        onHide    : new Event('onHide')
+      };
+      self.modal            = document.getElementById(id);
+      self.classClose       = '.close';
+      self.classCancel      = '.cancel';
+      self.classConfirm     = '.confirm';
+      self.btnsOpen         = [];
+      self.utils            = {
         extend: extend
       };
-    }
 
-    self.utils.extend(self, options)
+      self.utils.extend(self, options);
+    }
   };
 
   this.show = function(){
+    self.modal.dispatchEvent(self.events.onShow);
     self.modal.style.display = "block";
   }
 
   this.hide = function(){
+    self.modal.dispatchEvent(self.events.onHide);
     self.modal.style.display = "none";
   }
 
   this.removeEvents = function(){
     var clone = self.modal.cloneNode(true);
-    el.parentNode.replaceChild(clone, self.modal);
+    self.modal.parentNode.replaceChild(clone, self.modal);
     self.modal = clone;
   }
 
-  this.attach() {
+  this.on = function(event, callback){
+    this.modal.addEventListener(event, callback);
+  }
+
+  this.attach = function() {
     var items = [];
 
-    items = self.modal.querySelector(self.classClose);
+    items = self.modal.querySelectorAll(self.classClose);
     for (var i = items.length - 1; i >= 0; i--) {
       items[i].addEventListener('click', function(){
         self.hide();
       });
     }
 
-    var items = self.modal.querySelector(self.classCancel);
+    items = self.modal.querySelectorAll(self.classCancel);
     for (var i = items.length - 1; i >= 0; i--) {
       items[i].addEventListener('click', function(){
         self.hide();
       });
     }
 
-    var items = self.modal.querySelector(self.confirm);
+    items = self.modal.querySelectorAll(self.classConfirm);
+      console.log(items)
     for (var i = items.length - 1; i >= 0; i--) {
       items[i].addEventListener('click', function(){
+        self.modal.dispatchEvent(self.events.onConfirm);
         self.hide();
       });
     }
@@ -74,15 +87,17 @@ var modalise = function(id, options) {
   this.addOpenBtn = function(element) {
     self.btnsOpen.push(element);
   };
+
+  init.start();
 };
 
 
 // AMD support
 if (typeof define === 'function' && define.amd) {
-  define(function () { return modalise; });
+  define(function () { return Modalise; });
 }
 
-module.exports = modalise;
-window.modalise = modalise;
+module.exports = Modalise;
+window.Modalise = Modalise;
 
 })(window);

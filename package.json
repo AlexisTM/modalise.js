@@ -1,6 +1,6 @@
 {
   "name": "modalise.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "ModaliseJS aims to give you an easy, fast and efficient library to make modals in plain javascript. ",
   "main": "index.js",
   "scripts": {
@@ -33,13 +33,24 @@
   },
   "homepage": "https://github.com/AlexisTM/modalise.js#readme",
   "devDependencies": {
-    "browserify": "^13.1.1",
-    "gulp-cli": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "node-sass": "^3.10.1"
+    "gulp-cli": "^1.2.2"
   },
   "dependencies": {
     "browserify": "^13.1.1",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-uglifycss": "^1.0.6",
+    "gulp-util": "^3.0.7",
+    "gutil": "^1.6.4",
+    "jade": "^1.11.0",
+    "lodash.assign": "^4.2.0",
+    "node-sass": "^3.10.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
   }
 }

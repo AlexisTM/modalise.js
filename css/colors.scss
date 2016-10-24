@@ -1,6 +1,8 @@
-$primary: darken(#428bca, 6.5%);
+$primary_band: #5cb85c;
+$primary_content_background : #fefefe;
 $warning: #f0ad4e;
-$default: $primary;
-$success: #5cb85c
-$info: #5bc0de
-$danger: #d9534f
+$default: $primary_band;
+$success: #5cb85c;
+$info: #5bc0de;
+$danger: #d9534f; 
+$background-color: rgba(0,0,0,0.4);
