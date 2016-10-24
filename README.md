@@ -88,7 +88,7 @@ The output files are in the dist folder.
 
 ### [bottom modal](https://github.com/AlexisTM/modalise.js/tree/master/examples/bottom)
 
-![bottom modal](http://raw.githubusercontent.com/AlexisTM/modalise.js/master/examples/bottom/image.png)
+![bottom modal](https://raw.githubusercontent.com/AlexisTM/modalise.js/master/examples/bottom/image.png)
 
 ### [bottom modal with pipe javascript](https://github.com/AlexisTM/modalise.js/tree/master/examples/bottom_pipe/)
 
@@ -96,7 +96,7 @@ The image is irrelevant, as it is the same foreground as the bottom modal ;)
 
 ### [color palette](https://github.com/AlexisTM/modalise.js/tree/master/examples/color_tests/)
 
-![color palette](http://raw.githubusercontent.com/AlexisTM/modalise.js/master/examples/bottom/color_tests.png)
+![color palette](https://raw.githubusercontent.com/AlexisTM/modalise.js/master/examples/color_tests/image.png)
 
 ## Contribute
 
