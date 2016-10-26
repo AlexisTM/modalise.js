@@ -24,7 +24,7 @@ The CSS is an example of CSS. You will more likely make your own, which fits you
 <body>
     <h1>Example modal 1</h1><button id="openModal">Show the modal</button>
     <div class="mdl mdl-fadein" id="exampleModal">
-        <div class="mdl-content-primary mdl-slidein">
+        <div class="mdl-content mdl-slidein">
             <center>
                 <div class="mdl-header mdl-primary">
                     <span class="close">X</span>
