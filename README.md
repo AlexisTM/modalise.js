@@ -26,14 +26,14 @@ The CSS is an example of CSS. You will more likely make your own, which fits you
     <div class="mdl mdl-fadein" id="exampleModal">
         <div class="mdl-content mdl-slidein">
             <center>
-                <div class="mdl-header mdl-primary">
+                <div class="mdl-header mdl-band-primary">
                     <span class="close">X</span>
                     <h2>Example modal</h2>
                 </div>
-                <div class="mdl-body mdl-primary">
+                <div class="mdl-body">
                     <h3>Content modal</h3>
                 </div>
-                <div class="mdl-footer mdl-primary">
+                <div class="mdl-footer mdl-band-primary">
                     <button class="confirm" onclick="return false">Do
                     thing</button><button class="cancel" onclick=
                     "return false">Cancel the thing</button>
