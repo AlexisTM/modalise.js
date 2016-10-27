@@ -2,7 +2,7 @@
 
 Modalise aims to give you an **easy**, **fast** and **efficient** library to make modals in plain javascript.
 
-The CSS is an example of CSS. You will more likely make your own, which fits your app.
+The CSS is an example of modal design. You will more likely make your own, which fits your app.
 
 **Web designer (for the CSS in less or sass, as you prefer) is needed**
 
@@ -72,7 +72,7 @@ window.onload = function(){
 For more informations, go to the [API readme](https://github.com/AlexisTM/modalise.js/blob/master/API.md) page.
 
 
-## Install
+## Compile
 
 ```
 npm install 
