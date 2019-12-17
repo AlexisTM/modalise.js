@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/AlexisTM/modalise.js#readme",
   "devDependencies": {
-    "gulp-cli": "^1.2.2"
+    "gulp-cli": "^2.2.0"
   },
   "dependencies": {
     "browserify": "^13.1.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.0",
     "gulp-jade": "^1.1.0",
     "gulp-sass": "^2.3.2",
